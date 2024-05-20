@@ -103,7 +103,9 @@ class moodMainViewController: UIViewController {
         //mainViewNavigationBarListBtn.image = UIImage(named: "pencil")
         
         /* issue2: button 객체의 사이즈에 딱 맞게 이미지를 넣으려 contentMode 설정 코드를 짰지만 버튼 사이즈에 맞춰 사이즈가 줄어들지 않음
-           solution2: backgroundImage로 집어넣었더니 버튼 사이즈에 맞게 자동 조절됨*/
+           solution2: backgroundImage로 집어넣었더니 버튼 사이즈에 맞게 자동 조절됨
+           solution2-1: setImage로도 버튼 사이즈에 맞게 들어감. 버튼 타입 하나가 plain으로 되어 있어 났던 오류였음.
+         이미지 asset도 original 이미지로 바꿔줘야함. 그렇지 않으면 tint color 덮어 씌워져서 실행됨*/
         //buttonOne.imageView?.contentMode = .scaleAspectFit
         
         /* issue3: button 객체의 backgroundImage를 스토리보드가 아닌 코드로 설정하니 반영이 안됨
@@ -113,8 +115,7 @@ class moodMainViewController: UIViewController {
 
     // 버튼 UI 세팅 함수 구현. 와일드카드 & 매개변수 활용. 스토리보드에서 각 버튼의 tag를 0~8로 지정해준 후 활용.
     func setBtn(_ btn: UIButton) {
-        
-        btn.setBackgroundImage(btnImageArr[btn.tag], for: .normal)
+        btn.setImage(btnImageArr[btn.tag], for: .normal)
         labelCollection[btn.tag].text = "\(moodArr[btn.tag]) \(btnLabelNumberArr[btn.tag])"
     
     }
