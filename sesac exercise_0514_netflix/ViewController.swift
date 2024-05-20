@@ -20,22 +20,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstMovieImage.layer.cornerRadius = firstMovieImage.frame.width / 2
-        firstMovieImage.clipsToBounds = true
-        firstMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        firstMovieImage.layer.borderWidth = 2
-
-        secondMovieImage.layer.cornerRadius = secondMovieImage.frame.width / 2
-        secondMovieImage.clipsToBounds = true
-        secondMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        secondMovieImage.layer.borderWidth = 2
+        movieImageUISetting(movieImage: firstMovieImage)
+        movieImageUISetting(movieImage: secondMovieImage)
+        movieImageUISetting(movieImage: thirdMovieImage)
         
-        thirdMovieImage.layer.cornerRadius = thirdMovieImage.frame.width / 2
-        thirdMovieImage.clipsToBounds = true
-        thirdMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        thirdMovieImage.layer.borderWidth = 2
+//        firstMovieImage.layer.cornerRadius = firstMovieImage.frame.width / 2
+//        firstMovieImage.clipsToBounds = true
+//        firstMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//        firstMovieImage.layer.borderWidth = 2
+//
+//        secondMovieImage.layer.cornerRadius = secondMovieImage.frame.width / 2
+//        secondMovieImage.clipsToBounds = true
+//        secondMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//        secondMovieImage.layer.borderWidth = 2
+//        
+//        thirdMovieImage.layer.cornerRadius = thirdMovieImage.frame.width / 2
+//        thirdMovieImage.clipsToBounds = true
+//        thirdMovieImage.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//        thirdMovieImage.layer.borderWidth = 2
     }
 
-
+    func movieImageUISetting( movieImage m: UIImageView) {
+        m.layer.cornerRadius = thirdMovieImage.frame.width / 2
+        m.clipsToBounds = true
+        m.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        m.layer.borderWidth = 2
+        
+    }
 }
 

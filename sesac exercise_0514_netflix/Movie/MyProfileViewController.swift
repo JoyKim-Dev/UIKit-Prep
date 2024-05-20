@@ -26,45 +26,62 @@ class MyProfileViewController: UIViewController {
 
         // Placeholder text & textcolor 설정
         firstTextField.attributedPlaceholder = NSAttributedString(string: "이메일 주소 또는 전화번호 입력", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
-        // text 정렬 설정
-        firstTextField.textAlignment = .center
-        // 입력될 textcolor 설정
-        firstTextField.textColor = .red
-        // 텍스트필드 선택하면 팝업될 키보드 유형 설정
-        firstTextField.keyboardType = .emailAddress
-        // 텍스트필드 테두리 디자인 설정
-        firstTextField.borderStyle = .roundedRect
-        // 텍스트필드 폰트 사이즈 설정
-        firstTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
-       
+        
         secondTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
-        secondTextField.textAlignment = .center
-        secondTextField.textColor = .orange
-        secondTextField.keyboardType = .default
-        secondTextField.borderStyle = .roundedRect
-        secondTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
-        secondTextField.isSecureTextEntry = true
         
         thirdTextField.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
-        thirdTextField.textAlignment = .center
-        thirdTextField.textColor = .yellow
-        thirdTextField.keyboardType = .default
-        thirdTextField.borderStyle = .roundedRect
-        thirdTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
         
         fourthTextField.attributedPlaceholder = NSAttributedString(string: "위치 입력", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
-        fourthTextField.textAlignment = .center
-        fourthTextField.textColor = .green
-        fourthTextField.keyboardType = .default
-        fourthTextField.borderStyle = .roundedRect
-        fourthTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
         
         fifthTextField.attributedPlaceholder = NSAttributedString(string: "추천 코드 입력", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
-        fifthTextField.textAlignment = .center
-        fifthTextField.textColor = .blue
-        fifthTextField.keyboardType = .decimalPad
-        fifthTextField.borderStyle = .roundedRect
-        fifthTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
+        
+        
+       
+        textFieldUI(firstTextField)
+        textFieldUI(secondTextField)
+        textFieldUI(thirdTextField)
+        textFieldUI(fourthTextField)
+        textFieldUI(fifthTextField)
+        
+       
+//        // text 정렬 설정
+//        firstTextField.textAlignment = .center
+//        // 입력될 textcolor 설정
+//        firstTextField.textColor = .red
+//        // 텍스트필드 선택하면 팝업될 키보드 유형 설정
+//        firstTextField.keyboardType = .emailAddress
+//        // 텍스트필드 테두리 디자인 설정
+//        firstTextField.borderStyle = .roundedRect
+//        // 텍스트필드 폰트 사이즈 설정
+//        firstTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
+        
+//        secondTextField.textAlignment = .center
+//        secondTextField.textColor = .orange
+//        secondTextField.keyboardType = .default
+//        secondTextField.borderStyle = .roundedRect
+//        secondTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
+//        secondTextField.isSecureTextEntry = true
+//        
+//        
+//        thirdTextField.textAlignment = .center
+//        thirdTextField.textColor = .yellow
+//        thirdTextField.keyboardType = .default
+//        thirdTextField.borderStyle = .roundedRect
+//        thirdTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
+//        
+//       
+//        fourthTextField.textAlignment = .center
+//        fourthTextField.textColor = .green
+//        fourthTextField.keyboardType = .default
+//        fourthTextField.borderStyle = .roundedRect
+//        fourthTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
+//        
+//        
+//        fifthTextField.textAlignment = .center
+//        fifthTextField.textColor = .blue
+//        fifthTextField.keyboardType = .decimalPad
+//        fifthTextField.borderStyle = .roundedRect
+//        fifthTextField.font = UIFont.boldSystemFont(ofSize: 15.0)
         
         // 스위치 on/off 상태 설정
         addInfoSwitch.setOn(false, animated: true)
@@ -83,6 +100,18 @@ class MyProfileViewController: UIViewController {
           outgoing.font = UIFont.systemFont(ofSize: 15)
           return outgoing
       }
+        func textFieldUI(_ t: UITextField) {
+            // text 정렬 설정
+            t.textAlignment = .center
+            // 입력될 textcolor 설정
+            t.textColor = .red
+            // 텍스트필드 선택하면 팝업될 키보드 유형 설정
+            t.keyboardType = .emailAddress
+            // 텍스트필드 테두리 디자인 설정
+            t.borderStyle = .roundedRect
+            // 텍스트필드 폰트 사이즈 설정
+            t.font = UIFont.boldSystemFont(ofSize: 15.0)
+        }
         
     }
     

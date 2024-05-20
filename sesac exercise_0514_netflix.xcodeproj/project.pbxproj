@@ -17,6 +17,7 @@
 		350E24752BF5EA480056AD1E /* SecondMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E24742BF5EA480056AD1E /* SecondMovieViewController.swift */; };
 		350E24772BF5EA560056AD1E /* ThirdMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E24762BF5EA560056AD1E /* ThirdMovieViewController.swift */; };
 		350E24792BF5F1360056AD1E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E24782BF5F1360056AD1E /* MyProfileViewController.swift */; };
+		357FBCC92BF72253000F7DD7 /* exampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357FBCC82BF72253000F7DD7 /* exampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		350E24742BF5EA480056AD1E /* SecondMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMovieViewController.swift; sourceTree = "<group>"; };
 		350E24762BF5EA560056AD1E /* ThirdMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdMovieViewController.swift; sourceTree = "<group>"; };
 		350E24782BF5F1360056AD1E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		357FBCC82BF72253000F7DD7 /* exampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				350776692BF34429006220B8 /* AppDelegate.swift */,
 				3507766B2BF34429006220B8 /* SceneDelegate.swift */,
 				3507766D2BF34429006220B8 /* ViewController.swift */,
+				357FBCC82BF72253000F7DD7 /* exampleViewController.swift */,
 				3507766F2BF34429006220B8 /* Main.storyboard */,
 				350776722BF3442A006220B8 /* Assets.xcassets */,
 				350776742BF3442A006220B8 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				350E24732BF5EA380056AD1E /* FirstMovieViewController.swift in Sources */,
+				357FBCC92BF72253000F7DD7 /* exampleViewController.swift in Sources */,
 				3507766E2BF34429006220B8 /* ViewController.swift in Sources */,
 				350E24792BF5F1360056AD1E /* MyProfileViewController.swift in Sources */,
 				3507766A2BF34429006220B8 /* AppDelegate.swift in Sources */,

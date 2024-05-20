@@ -33,24 +33,28 @@ class FirstMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 영화 포스터 이미지뷰 모서리 둥글게
-        firstImageView.layer.cornerRadius = 10
-        secondImageView.layer.cornerRadius = 10
-        thirdImageView.layer.cornerRadius = 10
-        fourthImageView.layer.cornerRadius = 10
-        
-        // 영화 포스터 테두리 두께 설정
-        firstImageView.layer.borderWidth = 2
-        secondImageView.layer.borderWidth = 2
-        thirdImageView.layer.borderWidth = 2
-        fourthImageView.layer.borderWidth = 2
-        
-        // 영화 포스터 테두리 색상 설정
-        firstImageView.layer.borderColor = UIColor.lightGray.cgColor
-        secondImageView.layer.borderColor = UIColor.blue.cgColor
-        thirdImageView.layer.borderColor = UIColor.gray.cgColor
-        fourthImageView.layer.borderColor = UIColor.green.cgColor
-        
+//        // 영화 포스터 이미지뷰 모서리 둥글게
+//        firstImageView.layer.cornerRadius = 10
+//        secondImageView.layer.cornerRadius = 10
+//        thirdImageView.layer.cornerRadius = 10
+//        fourthImageView.layer.cornerRadius = 10
+//        
+//        // 영화 포스터 테두리 두께 설정
+//        ç
+//        firstImageView.layer.cornerRadius = 10
+//        thirdImageView.layer.borderWidth = 2
+//        fourthImageView.layer.borderWidth = 2
+//        
+//        // 영화 포스터 테두리 색상 설정
+//        firstImageView.layer.borderColor = UIColor.lightGray.cgColor
+//        secondImageView.layer.borderColor = UIColor.blue.cgColor
+//        thirdImageView.layer.borderColor = UIColor.gray.cgColor
+//        fourthImageView.layer.borderColor = UIColor.green.cgColor
+//        
+        designImageViewUI(firstImageView, color: UIColor.lightGray.cgColor)
+        designImageViewUI(secondImageView, color: UIColor.blue.cgColor)
+        designImageViewUI(thirdImageView, color: UIColor.gray.cgColor)
+        designImageViewUI(fourthImageView, color: UIColor.green.cgColor)
         
         // 탑텐 마크 숨김 상태 설정
         // * 탑텐 마크 랜덤
@@ -62,6 +66,13 @@ class FirstMovieViewController: UIViewController {
         
     }
     
+    func designImageViewUI(_ i: UIImageView, color c:CGColor) {
+        firstImageView.layer.cornerRadius = 10
+        thirdImageView.layer.borderWidth = 2
+        firstImageView.layer.borderColor = c
+        firstMovieMarkImageView.isHidden = true
+        
+    }
     
     @IBAction func playBtnTapped(_ sender: UIButton) {
         // 버튼 누르면 영화 포스터 랜덤 변경
