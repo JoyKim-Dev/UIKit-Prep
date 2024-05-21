@@ -1,24 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BMIViewController" customModule="sesacExercise_BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf3-sT-oES">
+                                <rect key="frame" x="30" y="79" width="111" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 BMI 지수를  알려드릴게요. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoX-VG-9RC">
+                                <rect key="frame" x="30" y="119.33333333333333" width="130.66666666666666" height="40.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="r2a-4J-3Cp">
+                                <rect key="frame" x="175.66666666666663" y="79" width="187.33333333333337" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r2a-4J-3Cp" secondAttribute="height" multiplier="78:125" id="MtV-LT-zYP"/>
+                                    <constraint firstAttribute="height" constant="300" id="mg4-pZ-THs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키가 어떻게?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBx-1b-UCh">
+                                <rect key="frame" x="29.999999999999993" y="360" width="86.333333333333314" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhc-nP-Do3">
+                                <rect key="frame" x="30" y="385.33333333333331" width="333" height="50"/>
+                                <color key="backgroundColor" red="0.90434800790009606" green="0.96609533475914078" blue="0.96841150522232056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xSZ-SH-2p9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몸무게는? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgJ-3v-ETY">
+                                <rect key="frame" x="30" y="460.33333333333331" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ts-Dn-SXf">
+                                <rect key="frame" x="30" y="486.33333333333331" width="333" height="49.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="klD-PO-dca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6N-PS-39p">
+                                <rect key="frame" x="224" y="541.33333333333337" width="139" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="랜덤으로 BMI 계산하기"/>
+                                <connections>
+                                    <action selector="randomCaculatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btO-LU-tce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-FT-UG1">
+                                <rect key="frame" x="30" y="651.33333333333337" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iys-XO-hnu"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="결과확인"/>
+                                <connections>
+                                    <action selector="calcuateBMIBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agv-Cm-V6O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Nhc-nP-Do3" firstAttribute="top" secondItem="CBx-1b-UCh" secondAttribute="bottom" constant="5" id="7aV-tE-Fy4"/>
+                            <constraint firstItem="7X9-FT-UG1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DLb-4d-cFw"/>
+                            <constraint firstItem="Lf3-sT-oES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="E0z-lT-OvI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ts-Dn-SXf" secondAttribute="trailing" constant="30" id="Gpp-5s-iVV"/>
+                            <constraint firstItem="WgJ-3v-ETY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Itx-5R-7Zo"/>
+                            <constraint firstItem="LoX-VG-9RC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="NNX-Nd-WMv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T6N-PS-39p" secondAttribute="trailing" constant="30" id="O65-A2-zat"/>
+                            <constraint firstItem="T6N-PS-39p" firstAttribute="top" secondItem="8Ts-Dn-SXf" secondAttribute="bottom" constant="5" id="QJr-Z4-buk"/>
+                            <constraint firstItem="LoX-VG-9RC" firstAttribute="top" secondItem="Lf3-sT-oES" secondAttribute="bottom" constant="20" id="SgB-Ir-Zm7"/>
+                            <constraint firstItem="WgJ-3v-ETY" firstAttribute="top" secondItem="Nhc-nP-Do3" secondAttribute="bottom" constant="25" id="Tfc-Xo-HKP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r2a-4J-3Cp" secondAttribute="trailing" constant="30" id="Urc-nW-e7A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nhc-nP-Do3" secondAttribute="trailing" constant="30" id="XOi-gr-ok0"/>
+                            <constraint firstItem="Nhc-nP-Do3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="f5N-Wu-IFE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7X9-FT-UG1" secondAttribute="trailing" constant="30" id="jED-cQ-XID"/>
+                            <constraint firstItem="Lf3-sT-oES" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jSa-wW-dNO"/>
+                            <constraint firstItem="8Ts-Dn-SXf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="meo-FF-PHy"/>
+                            <constraint firstItem="7X9-FT-UG1" firstAttribute="top" secondItem="T6N-PS-39p" secondAttribute="bottom" constant="80" id="mlu-JL-DRb"/>
+                            <constraint firstItem="8Ts-Dn-SXf" firstAttribute="top" secondItem="WgJ-3v-ETY" secondAttribute="bottom" constant="5" id="nv6-K3-eOs"/>
+                            <constraint firstItem="r2a-4J-3Cp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tlS-si-8dZ"/>
+                            <constraint firstItem="CBx-1b-UCh" firstAttribute="top" secondItem="LoX-VG-9RC" secondAttribute="bottom" constant="200" id="vpW-xu-M6k"/>
+                            <constraint firstItem="CBx-1b-UCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="yzg-8Q-naZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2cK-Cm-YxM" appends="YES" id="Jq7-lx-bFA"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="calcuateBMIBtn" destination="7X9-FT-UG1" id="Swg-z1-lxG"/>
+                        <outlet property="firstQuestionLabel" destination="CBx-1b-UCh" id="JGS-MD-vjD"/>
+                        <outlet property="heightTextField" destination="Nhc-nP-Do3" id="m3T-8h-c6v"/>
+                        <outlet property="randomBMIBtn" destination="T6N-PS-39p" id="Pnu-np-zKr"/>
+                        <outlet property="secondQuestionLabel" destination="WgJ-3v-ETY" id="Ed7-ro-ZaW"/>
+                        <outlet property="subTitleLabel" destination="LoX-VG-9RC" id="G3u-0J-E0R"/>
+                        <outlet property="titleLabel" destination="Lf3-sT-oES" id="yML-dy-gUQ"/>
+                        <outlet property="weightTextField" destination="8Ts-Dn-SXf" id="Flo-y5-oeC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2cK-Cm-YxM">
+                    <connections>
+                        <action selector="tapGestureKeyboardDown:" destination="BYZ-38-t0r" id="eF9-0L-aqB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-1089.3129770992366" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="147" height="229.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
