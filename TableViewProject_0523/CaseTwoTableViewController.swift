@@ -16,7 +16,6 @@ class CaseTwoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = .black
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,9 +38,9 @@ class CaseTwoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "setting")!
         
         cell.textLabel?.text = list[indexPath.section][indexPath.row]
-        cell.textLabel?.textColor = .white
+        cell.textLabel?.textColor = .black
         cell.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
-        cell.backgroundColor = .black
+        
         
         
         return cell
@@ -50,11 +49,11 @@ class CaseTwoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 1:
+        case 0:
             return "전체 설정"
-        case 2:
+        case 1:
             return "개인 설정"
-        case 3:
+        case 2:
             return "기타"
         default:
             return ""
