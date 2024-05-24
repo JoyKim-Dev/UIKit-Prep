@@ -38,7 +38,7 @@ class CaseTwoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "setting")!
         
         cell.textLabel?.text = list[indexPath.section][indexPath.row]
-        cell.textLabel?.textColor = .black
+//        cell.textLabel?.textColor = .black
         cell.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         
         
