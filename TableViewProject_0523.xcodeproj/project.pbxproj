@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		352C70292C00755000573AE4 /* CaseThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352C70282C00755000573AE4 /* CaseThree.storyboard */; };
-		352C702B2C00757D00573AE4 /* CaseThreeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C702A2C00757D00573AE4 /* CaseThreeTableViewController.swift */; };
 		352C702D2C007B0900573AE4 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C702C2C007B0900573AE4 /* SearchTableViewCell.swift */; };
+		3534AD1C2C0225A900F02F75 /* CaseThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534AD1B2C0225A900F02F75 /* CaseThreeViewController.swift */; };
 		3582E0A92BFF48AB0085EA6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582E0A82BFF48AB0085EA6F /* AppDelegate.swift */; };
 		3582E0AB2BFF48AB0085EA6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582E0AA2BFF48AB0085EA6F /* SceneDelegate.swift */; };
 		3582E0AD2BFF48AB0085EA6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582E0AC2BFF48AB0085EA6F /* ViewController.swift */; };
@@ -23,8 +23,8 @@
 
 /* Begin PBXFileReference section */
 		352C70282C00755000573AE4 /* CaseThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CaseThree.storyboard; sourceTree = "<group>"; };
-		352C702A2C00757D00573AE4 /* CaseThreeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseThreeTableViewController.swift; sourceTree = "<group>"; };
 		352C702C2C007B0900573AE4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		3534AD1B2C0225A900F02F75 /* CaseThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseThreeViewController.swift; sourceTree = "<group>"; };
 		3582E0A52BFF48AB0085EA6F /* TableViewProject_0523.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProject_0523.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3582E0A82BFF48AB0085EA6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3582E0AA2BFF48AB0085EA6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				3582E0AA2BFF48AB0085EA6F /* SceneDelegate.swift */,
 				3582E0AC2BFF48AB0085EA6F /* ViewController.swift */,
 				3582E0C02BFF53E90085EA6F /* CaseTwoTableViewController.swift */,
-				352C702A2C00757D00573AE4 /* CaseThreeTableViewController.swift */,
+				3534AD1B2C0225A900F02F75 /* CaseThreeViewController.swift */,
 				352C702C2C007B0900573AE4 /* SearchTableViewCell.swift */,
 				3582E0BC2BFF49000085EA6F /* CaseOne.storyboard */,
 				3582E0C22BFF75DB0085EA6F /* CaseTwo.storyboard */,
@@ -159,9 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3534AD1C2C0225A900F02F75 /* CaseThreeViewController.swift in Sources */,
 				3582E0C12BFF53E90085EA6F /* CaseTwoTableViewController.swift in Sources */,
 				3582E0AD2BFF48AB0085EA6F /* ViewController.swift in Sources */,
-				352C702B2C00757D00573AE4 /* CaseThreeTableViewController.swift in Sources */,
 				352C702D2C007B0900573AE4 /* SearchTableViewCell.swift in Sources */,
 				3582E0A92BFF48AB0085EA6F /* AppDelegate.swift in Sources */,
 				3582E0AB2BFF48AB0085EA6F /* SceneDelegate.swift in Sources */,
