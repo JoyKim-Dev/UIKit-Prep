@@ -9,6 +9,7 @@ import UIKit
 
     class SearchTableViewCell: UITableViewCell {
         
+        
         @IBOutlet var checkBtn: UIButton!
         @IBOutlet var favoriteBtn: UIButton!
         @IBOutlet var titleLabel: UILabel!

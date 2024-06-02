@@ -16,7 +16,7 @@ struct toBuy {
     var favorite: Bool
 }
 
-class CaseThreeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CaseThreeViewController: UIViewController {
     
     
     @IBOutlet var tableView: UITableView!
@@ -34,14 +34,20 @@ class CaseThreeViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-
-        setUpUI()
-        tableView.rowHeight = 50
+       
+        configureUI()
     }
     
-    func setUpUI() {
+
+
+}
+
+extension CaseThreeViewController {
+    
+    func configureUI() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 50
         
         searchBarView.backgroundColor = .gray.withAlphaComponent(0.1)
         searchBarView.layer.cornerRadius = 4
@@ -57,59 +63,6 @@ class CaseThreeViewController: UIViewController, UITableViewDataSource, UITableV
         addBtn.layer.cornerRadius = 4
         addBtn.backgroundColor = .lightGray.withAlphaComponent(0.2)
         addBtn.addTarget(self, action: #selector(addBtnTapped), for: .touchUpInside)
-    }
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
-    }
-    
-     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        return " "
-    }
-    
-     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 3
-    }
-        
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchTableViewCell", for: indexPath)as! SearchTableViewCell
-        
-        let data = itemList[indexPath.row]
-        
-        cell.backgroundColor = .gray.withAlphaComponent(0.1)
-        cell.layer.cornerRadius = 4
-        
-      
-        cell.titleLabel.text = data.item
-        cell.titleLabel.font = .boldSystemFont(ofSize: 15)
-        
-        
-        let checkName = data.check ? "checkmark.square.fill" : "checkmark.square"
-        let checkImage = UIImage(systemName: checkName)
-        cell.checkBtn.setImage(checkImage , for: .normal)
-        cell.checkBtn.tintColor = .black
-        
-        cell.checkBtn.tag = indexPath.row
-        cell.checkBtn.addTarget(self, action: #selector(checkBtnTapped), for: .touchUpInside)
-        
-        let starName = data.favorite ? "star.fill" : "star"
-        let starImage = UIImage(systemName: starName)
-        cell.favoriteBtn.setImage(starImage, for: .normal)
-        cell.favoriteBtn.tintColor = .black
-        
-        cell.favoriteBtn.tag = indexPath.row
-        cell.favoriteBtn.addTarget(self, action: #selector(favoriteBtnTapped), for: .touchUpInside)
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        itemList.remove(at: indexPath.row)
-        tableView.reloadData()
-        
     }
     
     @objc func addBtnTapped(_ sender:UIButton) {
@@ -135,5 +88,60 @@ class CaseThreeViewController: UIViewController, UITableViewDataSource, UITableV
         itemList[sender.tag].favorite.toggle()
         tableView.reloadRows(at:[IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
+}
 
+extension CaseThreeViewController:UITableViewDataSource, UITableViewDelegate  {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return itemList.count
+   }
+   
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       
+       return " "
+   }
+   
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+       
+       return 3
+   }
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath)as! SearchTableViewCell
+       
+       let data = itemList[indexPath.row]
+       
+       cell.backgroundColor = .gray.withAlphaComponent(0.1)
+       cell.layer.cornerRadius = 4
+       
+     
+       cell.titleLabel.text = data.item
+       cell.titleLabel.font = .boldSystemFont(ofSize: 15)
+       
+       
+       let checkName = data.check ? "checkmark.square.fill" : "checkmark.square"
+       let checkImage = UIImage(systemName: checkName)
+       cell.checkBtn.setImage(checkImage , for: .normal)
+       cell.checkBtn.tintColor = .black
+       
+       cell.checkBtn.tag = indexPath.row
+       cell.checkBtn.addTarget(self, action: #selector(checkBtnTapped), for: .touchUpInside)
+       
+       let starName = data.favorite ? "star.fill" : "star"
+       let starImage = UIImage(systemName: starName)
+       cell.favoriteBtn.setImage(starImage, for: .normal)
+       cell.favoriteBtn.tintColor = .black
+       
+       cell.favoriteBtn.tag = indexPath.row
+       cell.favoriteBtn.addTarget(self, action: #selector(favoriteBtnTapped), for: .touchUpInside)
+
+       return cell
+   }
+   
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       itemList.remove(at: indexPath.row)
+       tableView.reloadData()
+       
+   }
 }
